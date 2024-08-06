@@ -1,76 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Time tracking dashboard</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time tracking dashboard</title>
 
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <main class="main container">
-            <div class="time-tracker">
-                <div class="time-tracker__user">
-                    <div class="time-tracker__user-content">
-                        <picture>
-                            <img src="images/image-jeremy.png" alt="Jeremy Avatar" />
-                        </picture>
-                        <div>
-                            <p>Report for</p>
-                            <h1 class="time-tracker__user-fullname">Jeremy Robson</h1>
-                        </div>
-                    </div>
-                    <ul class="time-tracker__timeframe-list">
-                        <li class="time-tracker__timeframe-list-item">Daily</li>
-                        <li class="time-tracker__timeframe-list-item">Weekly</li>
-                        <li class="time-tracker__timeframe-list-item">Monthly</li>
-                    </ul>
-                </div>
-                <ul class="time-tracker__list">
-                    <li class="time-tracker__list-item time-tracker__list-item--work">
-                        <div class="time-tracker__list-item-content">
-                            <h2 class="time-tracker__category">Work</h2>
-                            <p class="time-tracker__hours">32hrs</p>
-                            <p class="time-tracker__previous-hours">Previous - 36hrs</p>
-                        </div>
-                    </li>
-                    <li class="time-tracker__list-item time-tracker__list-item--play">
-                        <div class="time-tracker__list-item-content">
-                            <h2 class="time-tracker__category">Play</h2>
-                            <p class="time-tracker__hours">10hrs</p>
-                            <p class="time-tracker__previous-hours">Previous - 8hrs</p>
-                        </div>
-                    </li>
-                    <li class="time-tracker__list-item time-tracker__list-item--study">
-                        <div class="time-tracker__list-item-content">
-                            <h2 class="time-tracker__category">Study</h2>
-                            <p class="time-tracker__hours">4hrs</p>
-                            <p class="time-tracker__previous-hours">Previous - 7hrs</p>
-                        </div>
-                    </li>
-                    <li class="time-tracker__list-item time-tracker__list-item--exercise">
-                        <div class="time-tracker__list-item-content">
-                            <h2 class="time-tracker__category">Exercise</h2>
-                            <p class="time-tracker__hours">4hrs</p>
-                            <p class="time-tracker__previous-hours">Previous - 5hrs</p>
-                        </div>
-                    </li>
-                    <li class="time-tracker__list-item time-tracker__list-item--social">
-                        <div class="time-tracker__list-item-content">
-                            <h2 class="time-tracker__category">Social</h2>
-                            <p class="time-tracker__hours">5hrs</p>
-                            <p class="time-tracker__previous-hours">Previous - 10hrs</p>
-                        </div>
-                    </li>
-                    <li class="time-tracker__list-item time-tracker__list-item--selfcare">
-                        <div class="time-tracker__list-item-content">
-                            <h2 class="time-tracker__category">Self Care</h2>
-                            <p class="time-tracker__hours">2hrs</p>
-                            <p class="time-tracker__previous-hours">Previous - 2hrs</p>
-                        </div>
-                    </li>
-                </ul>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <main class="main container">
+      <div class="time-tracker">
+        <div class="time-tracker__user">
+          <div class="time-tracker__user-content">
+            <picture>
+              <img src="images/image-jeremy.png" alt="Jeremy Avatar" />
+            </picture>
+            <div>
+              <p>Report for</p>
+              <h1 class="time-tracker__user-fullname">Jeremy Robson</h1>
             </div>
-        </main>
-    </body>
+          </div>
+          <ul class="time-tracker__timeframe-list">
+            <li
+              class="time-tracker__timeframe-list-item"
+              data-timeframe="daily"
+            >
+              Daily
+            </li>
+            <li
+              class="time-tracker__timeframe-list-item"
+              data-timeframe="weekly"
+            >
+              Weekly
+            </li>
+            <li
+              class="time-tracker__timeframe-list-item"
+              data-timeframe="monthly"
+            >
+              Monthly
+            </li>
+          </ul>
+        </div>
+        <div class="time-tracker__list-container">
+          <!-- <ul class="time-tracker__list">
+            <li class="time-tracker__list-item time-tracker__list-item--work">
+              <div class="time-tracker__list-item-content">
+                <h2 class="time-tracker__category">Work</h2>
+                <p class="time-tracker__hours">32hrs</p>
+                <p class="time-tracker__previous-hours">Previous - 36hrs</p>
+              </div>
+            </li>
+            <li class="time-tracker__list-item time-tracker__list-item--play">
+              <div class="time-tracker__list-item-content">
+                <h2 class="time-tracker__category">Play</h2>
+                <p class="time-tracker__hours">10hrs</p>
+                <p class="time-tracker__previous-hours">Previous - 8hrs</p>
+              </div>
+            </li>
+            <li class="time-tracker__list-item time-tracker__list-item--study">
+              <div class="time-tracker__list-item-content">
+                <h2 class="time-tracker__category">Study</h2>
+                <p class="time-tracker__hours">4hrs</p>
+                <p class="time-tracker__previous-hours">Previous - 7hrs</p>
+              </div>
+            </li>
+            <li
+              class="time-tracker__list-item time-tracker__list-item--exercise"
+            >
+              <div class="time-tracker__list-item-content">
+                <h2 class="time-tracker__category">Exercise</h2>
+                <p class="time-tracker__hours">4hrs</p>
+                <p class="time-tracker__previous-hours">Previous - 5hrs</p>
+              </div>
+            </li>
+            <li class="time-tracker__list-item time-tracker__list-item--social">
+              <div class="time-tracker__list-item-content">
+                <h2 class="time-tracker__category">Social</h2>
+                <p class="time-tracker__hours">5hrs</p>
+                <p class="time-tracker__previous-hours">Previous - 10hrs</p>
+              </div>
+            </li>
+            <li
+              class="time-tracker__list-item time-tracker__list-item--selfcare"
+            >
+              <div class="time-tracker__list-item-content">
+                <h2 class="time-tracker__category">Self Care</h2>
+                <p class="time-tracker__hours">2hrs</p>
+                <p class="time-tracker__previous-hours">Previous - 2hrs</p>
+              </div>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
