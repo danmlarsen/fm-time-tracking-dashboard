@@ -1,210 +1,225 @@
-@import url("reset.css");
+@import url('reset.css');
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  /* Colors */
-  --color-blue: hsl(246, 80%, 60%);
-  --color-light-red: hsl(15, 100%, 70%);
-  --color-soft-blue: hsl(195, 74%, 62%);
-  --color-red: hsl(348, 100%, 68%);
-  --color-green: hsl(145, 58%, 55%);
-  --color-violet: hsl(264, 64%, 52%);
-  --color-soft-orange: hsl(43, 84%, 65%);
+    /* Colors */
+    --color-blue: hsl(246, 80%, 60%);
+    --color-light-red: hsl(15, 100%, 70%);
+    --color-soft-blue: hsl(195, 74%, 62%);
+    --color-red: hsl(348, 100%, 68%);
+    --color-green: hsl(145, 58%, 55%);
+    --color-violet: hsl(264, 64%, 52%);
+    --color-soft-orange: hsl(43, 84%, 65%);
 
-  --color-neutral-800: hsl(226, 43%, 10%);
-  --color-neutral-600: hsl(235, 46%, 20%);
-  --color-neutral-400: hsl(235, 45%, 61%);
-  --color-neutral-200: hsl(236, 100%, 87%);
-  --color-neutral-100: #fff;
-  /* Typography */
-  --ff-primary: "Rubik", sans-serif;
-  --fs-400: 1.8rem;
-  --fs-800: 3rem;
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-bold: 500;
+    --color-neutral-800: hsl(226, 43%, 10%);
+    --color-neutral-600: hsl(235, 46%, 20%);
+    --color-neutral-400: hsl(235, 45%, 61%);
+    --color-neutral-200: hsl(236, 100%, 87%);
+    --color-neutral-100: #fff;
+    /* Typography */
+    --ff-primary: 'Rubik', sans-serif;
+    --fs-400: 1.8rem;
+    --fs-800: 3rem;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 500;
 }
 
 @media screen and (min-width: 64em) {
-  :root {
-    --fs-800: 4.2rem;
-  }
+    :root {
+        --fs-800: 4.2rem;
+    }
 }
 
 body {
-  font-family: var(--ff-primary);
-  font-size: var(--fs-400);
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-800);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-800);
 }
 
 .container {
-  max-width: 60rem;
-  width: 100%;
-  margin: 0 auto;
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  padding: 9.6rem 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 9.6rem 2rem;
 }
 
 .time-tracker {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    min-height: 60rem;
 }
 
 .time-tracker__user {
-  background-color: var(--color-neutral-600);
-  border-radius: 15px;
-
-  margin-bottom: 2rem;
+    background-color: var(--color-neutral-600);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .time-tracker__user-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  background-color: var(--color-blue);
-  padding: 2rem;
-  border-radius: inherit;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--color-blue);
+    padding: 2rem;
+    border-radius: inherit;
+    flex: 1;
 }
 
 .time-tracker__user-avatar img {
-  max-width: 100px;
-  border: 2px solid var(--color-neutral-100);
-  border-radius: 50%;
+    max-width: 100px;
+    border: 2px solid var(--color-neutral-100);
+    border-radius: 50%;
 }
 
 .time-tracker__timeframe-list {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
 }
 
 .time-tracker__timeframe-btn:link,
 .time-tracker__timeframe-btn:visited {
-  text-decoration: none;
-  color: var(--color-neutral-400);
+    text-decoration: none;
+    color: var(--color-neutral-400);
 }
 
 .time-tracker__timeframe-btn:hover,
 .time-tracker__timeframe-btn:active,
 .time-tracker__timeframe-btn.time-tracker__timeframe-btn--active {
-  color: var(--color-neutral-100);
+    color: var(--color-neutral-100);
 }
 
 .time-tracker__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
 }
 
 .time-tracker__list-item {
-  border-radius: 15px;
-  padding-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+    border-radius: 15px;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
 .time-tracker__list-item:hover .time-tracker__list-item-content {
-  background-color: var(--color-neutral-400);
+    background-color: var(--color-neutral-400);
 }
 
 .time-tracker__list-item--work {
-  background: url("../images/icon-work.svg"), var(--color-light-red);
+    background: url('../images/icon-work.svg'), var(--color-light-red);
 }
 .time-tracker__list-item--play {
-  background: url("../images/icon-play.svg"), var(--color-soft-blue);
+    background: url('../images/icon-play.svg'), var(--color-soft-blue);
 }
 .time-tracker__list-item--study {
-  background: url("../images/icon-study.svg"), var(--color-red);
+    background: url('../images/icon-study.svg'), var(--color-red);
 }
 .time-tracker__list-item--exercise {
-  background: url("../images/icon-exercise.svg"), var(--color-green);
+    background: url('../images/icon-exercise.svg'), var(--color-green);
 }
 .time-tracker__list-item--social {
-  background: url("../images/icon-social.svg"), var(--color-violet);
+    background: url('../images/icon-social.svg'), var(--color-violet);
 }
 .time-tracker__list-item--selfcare {
-  background: url("../images/icon-self-care.svg"), var(--color-soft-orange);
+    background: url('../images/icon-self-care.svg'), var(--color-soft-orange);
 }
 
 .time-tracker__list-item {
-  background-repeat: no-repeat;
-  background-position: 90% -10%;
+    background-repeat: no-repeat;
+    background-position: 90% -10%;
 }
 
 .time-tracker__list-item-content {
-  background-color: var(--color-neutral-600);
-  border-radius: inherit;
-  padding: 3.2rem 1.6rem;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  align-items: center;
+    background-color: var(--color-neutral-600);
+    border-radius: inherit;
+    padding: 3.2rem 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
 }
 
 .time-tracker__category {
-  font-size: 2rem;
-  font-weight: var(--fw-bold);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+}
 
-  grid-column: 1 / -1;
+.time-tracker__options {
+    justify-self: end;
 }
 
 .time-tracker__hours {
-  font-size: var(--fs-800);
-  font-weight: var(--fw-light);
+    font-size: var(--fs-800);
+    font-weight: var(--fw-light);
 }
 
 .time-tracker__previous-hours {
-  font-size: 1.6rem;
-  color: var(--color-neutral-200);
+    font-size: 1.6rem;
+    color: var(--color-neutral-200);
+    justify-self: end;
 }
 
 @media screen and (min-width: 64em) {
-  .container {
-    max-width: 144rem;
-  }
+    .container {
+        max-width: 144rem;
+    }
 
-  .time-tracker {
-    flex-direction: row;
-  }
+    .time-tracker {
+        flex-direction: row;
+    }
 
-  .time-tracker__user {
-    max-width: 30rem;
-    margin: 0;
-  }
+    .time-tracker__user {
+        max-width: 30rem;
+        margin: 0;
+    }
 
-  .time-tracker__user-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .time-tracker__user-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .time-tracker__timeframe-list {
-    flex-direction: column;
-    gap: 2rem;
-  }
+    .time-tracker__timeframe-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
 
-  .time-tracker__list {
-    height: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin-left: 3rem;
-  }
+    .time-tracker__list {
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin-left: 3rem;
+    }
 
-  .time-tracker__list-item-content {
-    grid-template-columns: 1fr;
-    min-width: 25rem;
-  }
+    .time-tracker__list-item-content {
+        min-width: 30rem;
+    }
+
+    .time-tracker__options {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .time-tracker__previous-hours {
+        grid-column: 1;
+        justify-self: initial;
+    }
 }
 
 @media screen and (min-width: 90em) {
-  .time-tracker__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .time-tracker__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
