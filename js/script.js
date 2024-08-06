@@ -51,6 +51,13 @@ const updateTimeTracker = function () {
 timeframeListEl.addEventListener("click", function (e) {
   if (!e.target.dataset?.timeframe) return;
 
+  timeframeListEl
+    .querySelectorAll(".time-tracker__timeframe-btn")
+    .forEach((el) =>
+      el.classList.remove("time-tracker__timeframe-btn--active")
+    );
+  e.target.classList.add("time-tracker__timeframe-btn--active");
+
   state.selectedTimeframe = e.target.dataset.timeframe;
 
   updateTimeTracker();

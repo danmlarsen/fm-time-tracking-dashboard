@@ -13,7 +13,7 @@
       <div class="time-tracker">
         <div class="time-tracker__user">
           <div class="time-tracker__user-content">
-            <picture>
+            <picture class="time-tracker__user-avatar">
               <img src="images/image-jeremy.png" alt="Jeremy Avatar" />
             </picture>
             <div>
@@ -26,19 +26,34 @@
               class="time-tracker__timeframe-list-item"
               data-timeframe="daily"
             >
-              Daily
+              <a
+                href="#"
+                class="time-tracker__timeframe-btn"
+                data-timeframe="daily"
+                >Daily</a
+              >
             </li>
             <li
               class="time-tracker__timeframe-list-item"
               data-timeframe="weekly"
             >
-              Weekly
+              <a
+                href="#"
+                class="time-tracker__timeframe-btn time-tracker__timeframe-btn--active"
+                data-timeframe="weekly"
+                >Weekly</a
+              >
             </li>
             <li
               class="time-tracker__timeframe-list-item"
               data-timeframe="monthly"
             >
-              Monthly
+              <a
+                href="#"
+                class="time-tracker__timeframe-btn"
+                data-timeframe="monthly"
+                >Monthly</a
+              >
             </li>
           </ul>
         </div>
