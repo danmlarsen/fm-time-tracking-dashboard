@@ -19,7 +19,10 @@
     --color-neutral-100: #fff;
     /* Typography */
     --ff-primary: 'Rubik', sans-serif;
-    --fs-400: 1.8rem;
+    --fs-200: 1.4rem;
+    --fs-300: 1.6rem;
+    --fs-400: 2rem;
+    --fs-600: 2.4rem;
     --fs-800: 3rem;
     --fw-light: 300;
     --fw-regular: 400;
@@ -28,7 +31,8 @@
 
 @media screen and (min-width: 64em) {
     :root {
-        --fs-800: 4.2rem;
+        --fs-600: 4rem;
+        --fs-800: 5.2rem;
     }
 }
 
@@ -37,6 +41,9 @@ body {
     font-size: var(--fs-400);
     color: var(--color-neutral-100);
     background-color: var(--color-neutral-800);
+
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -54,7 +61,9 @@ body {
 .time-tracker {
     display: flex;
     flex-direction: column;
-    min-height: 60rem;
+    min-height: 52rem;
+    max-width: 36rem;
+    width: 100%;
 }
 
 .time-tracker__user {
@@ -68,23 +77,32 @@ body {
 .time-tracker__user-content {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.6rem;
     background-color: var(--color-blue);
-    padding: 2rem;
+    color: var(--color-neutral-200);
+    padding: 3.2rem;
     border-radius: inherit;
     flex: 1;
+    font-size: var(--fs-200);
+    line-height: 1.3;
 }
 
 .time-tracker__user-avatar img {
-    max-width: 100px;
-    border: 2px solid var(--color-neutral-100);
+    max-width: 75px;
+    border: 3px solid var(--color-neutral-100);
     border-radius: 50%;
+}
+
+.time-tracker__user-fullname {
+    font-weight: var(--fw-light);
+    font-size: var(--fs-600);
+    color: var(--color-neutral-100);
 }
 
 .time-tracker__timeframe-list {
     display: flex;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 2rem 3rem;
 }
 
 .time-tracker__timeframe-btn:link,
@@ -114,8 +132,19 @@ body {
     overflow: hidden;
 }
 
+.time-tracker__list-item-content {
+    background-color: var(--color-neutral-600);
+    border-radius: inherit;
+    padding: 3.2rem 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
+}
+
 .time-tracker__list-item:hover .time-tracker__list-item-content {
     background-color: var(--color-neutral-400);
+    cursor: pointer;
 }
 
 .time-tracker__list-item--work {
@@ -142,34 +171,39 @@ body {
     background-position: 90% -10%;
 }
 
-.time-tracker__list-item-content {
-    background-color: var(--color-neutral-600);
-    border-radius: inherit;
-    padding: 3.2rem 1.6rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 100%;
-}
-
 .time-tracker__category {
-    font-size: 2rem;
+    font-size: var(--fs-400);
     font-weight: var(--fw-bold);
 }
 
 .time-tracker__options {
     justify-self: end;
+    display: block;
+    fill: var(--color-neutral-200);
+}
+
+.time-tracker__options:hover .time-tracker__options-icon {
+    fill: #fff;
 }
 
 .time-tracker__hours {
     font-size: var(--fs-800);
     font-weight: var(--fw-light);
+    align-self: end;
 }
 
 .time-tracker__previous-hours {
-    font-size: 1.6rem;
+    font-size: var(--fs-300);
     color: var(--color-neutral-200);
     justify-self: end;
+}
+
+.error {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.2rem;
 }
 
 @media screen and (min-width: 64em) {
@@ -178,6 +212,8 @@ body {
     }
 
     .time-tracker {
+        max-width: initial;
+        width: auto;
         flex-direction: row;
     }
 
@@ -204,7 +240,10 @@ body {
     }
 
     .time-tracker__list-item-content {
-        min-width: 30rem;
+        min-width: 26rem;
+        padding: 3.2rem;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto 1fr auto;
     }
 
     .time-tracker__options {
