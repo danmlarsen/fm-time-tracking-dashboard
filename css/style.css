@@ -31,6 +31,8 @@
 
 @media screen and (min-width: 90em) {
     :root {
+        --fs-300: 1.4rem;
+        --fs-400: 1.8rem;
         --fs-600: 4rem;
         --fs-800: 5.2rem;
     }
@@ -129,7 +131,7 @@ body {
 
 .time-tracker__list-item-content {
     background-color: var(--color-neutral-600);
-    border-radius: inherit;
+    border-radius: 10px;
     padding: 3.2rem 1.6rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
