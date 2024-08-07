@@ -29,7 +29,7 @@ const generateListItemMarkup = function () {
         const { timeframes, title } = item;
         const { current, previous } = timeframes[state.selectedTimeframe];
 
-        const previousText = state.selectedTimeframe == 'daily' ? 'Yesterday' : state.selectedTimeframe == 'weekly' ? 'Last week' : 'Last month';
+        const previousText = state.selectedTimeframe == 'daily' ? 'Yesterday' : state.selectedTimeframe == 'weekly' ? 'Last Week' : 'Last Month';
 
         return `
             <li class="time-tracker__list-item time-tracker__list-item--${title.toLowerCase().replace(' ', '')}">
