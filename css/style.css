@@ -108,6 +108,7 @@ body {
 .time-tracker__timeframe-btn:visited {
     text-decoration: none;
     color: var(--color-neutral-400);
+    transition: color 0.3s;
 }
 
 .time-tracker__timeframe-btn:hover,
@@ -134,6 +135,7 @@ body {
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
     height: 100%;
+    transition: background-color 0.3s;
 }
 
 .time-tracker__list-item:hover .time-tracker__list-item-content {
@@ -183,7 +185,11 @@ body {
 .time-tracker__options {
     justify-self: end;
     display: block;
+}
+
+.time-tracker__options-icon {
     fill: var(--color-neutral-200);
+    transition: fill 0.3s;
 }
 
 .time-tracker__options:hover .time-tracker__options-icon {
