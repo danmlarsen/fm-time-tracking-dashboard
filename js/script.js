@@ -35,8 +35,8 @@ const generateListItemMarkup = function () {
             <li class="time-tracker__list-item time-tracker__list-item--${title.toLowerCase().replace(' ', '')}">
                 <div class="time-tracker__list-item-content">
                 <h2 class="time-tracker__category">${title}</h2>
-                <a href="#" class="time-tracker__options">
-                <svg class="time-tracker__options-icon" alt="Options button" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+                <a href="#" class="time-tracker__options" aria-label="Options">
+                <svg class="time-tracker__options-icon" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
                 </a>
                 <p class="time-tracker__hours">${current}hrs</p>
                 <p class="time-tracker__previous-hours">${previousText} - ${previous}hrs</p>
